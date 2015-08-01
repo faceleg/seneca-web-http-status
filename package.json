@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/faceleg/seneca-web-http-status/issues"
   },
-  "homepage": "https://github.com/faceleg/seneca-web-http-status"
+  "homepage": "https://github.com/faceleg/seneca-web-http-status",
+  "dependencies": {
+    "know-your-http-well": "^0.2.0",
+    "ramda": "^0.17.1"
+  }
 }
