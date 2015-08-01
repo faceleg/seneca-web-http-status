@@ -1,0 +1,23 @@
+{
+  "name": "seneca-web-http-status",
+  "version": "1.0.0",
+  "description": "Provides seneca-web status code objects for convenience",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/faceleg/seneca-web-http-status.git"
+  },
+  "keywords": [
+    "seneca-web",
+    "http"
+  ],
+  "author": "Michael Robinson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faceleg/seneca-web-http-status/issues"
+  },
+  "homepage": "https://github.com/faceleg/seneca-web-http-status"
+}
