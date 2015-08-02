@@ -7,11 +7,13 @@ var indexBy = R.curry(function(prop, list) {
   return R.mapObj(R.head, R.groupBy(R.prop(prop), list));
 });
 
+var omitHeadings = ['1xx', '2xx', '3xx', '4xx', '5xx', '7xx'];
+
 module.exports = R.mapObj(function(statusCode) {
   return {
     http$: {
-      status: statusCode.code
+      status: parseInt(statusCode.code, 10)
     },
     why: statusCode.phrase
   };
-}, indexBy('code', R.map(R.pick(['code', 'phrase']), statusCodes)));
+}, R.omit(omitHeadings, indexBy('code', R.map(R.pick(['code', 'phrase']), statusCodes))));
