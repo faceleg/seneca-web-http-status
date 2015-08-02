@@ -1,4 +1,6 @@
 # seneca-web-http-status
+[![Build Status](https://travis-ci.org/faceleg/seneca-web-http-status.svg)](https://travis-ci.org/faceleg/seneca-web-http-status)
+
 Provides seneca-web status code objects for convenience
 
 ## Usage
