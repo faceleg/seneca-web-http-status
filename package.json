@@ -1,6 +1,6 @@
 {
   "name": "seneca-web-http-status",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provides seneca-web status code objects for convenience",
   "main": "index.js",
   "scripts": {
