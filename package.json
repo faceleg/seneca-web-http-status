@@ -4,7 +4,8 @@
   "description": "Provides seneca-web status code objects for convenience",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "test-watch": "./node_modules/.bin/mocha -w --reporter spec"
   },
   "repository": {
     "type": "git",

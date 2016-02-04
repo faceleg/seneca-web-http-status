@@ -111,3 +111,9 @@ module.exports = function api(options) {
 
 }
 ```
+
+## Custom status generator
+
+```JS
+statusCodes.custom(500, 'this is a custom message');
+```

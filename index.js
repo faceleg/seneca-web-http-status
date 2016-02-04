@@ -9,11 +9,19 @@ var indexBy = R.curry(function(prop, list) {
 
 var omitHeadings = ['1xx', '2xx', '3xx', '4xx', '5xx', '7xx'];
 
-module.exports = R.mapObj(function(statusCode) {
+var statusCodes = R.mapObj(function(statusCode) {
+  return statusGenerator(parseInt(statusCode.code, 10), statusCode.phrase)
+}, R.omit(omitHeadings, indexBy('code', R.map(R.pick(['code', 'phrase']), statusCodes))));
+
+statusCodes.custom = statusGenerator;
+
+module.exports = statusCodes;
+
+function statusGenerator(code, message) {
   return {
     http$: {
-      status: parseInt(statusCode.code, 10)
+      status: code
     },
-    why: statusCode.phrase
-  };
-}, R.omit(omitHeadings, indexBy('code', R.map(R.pick(['code', 'phrase']), statusCodes))));
+    why: message
+  }
+}
